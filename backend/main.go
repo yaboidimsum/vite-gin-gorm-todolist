@@ -5,10 +5,6 @@ import (
 	"gin-todo-app/config"
 	"gin-todo-app/models"
 	"gin-todo-app/routes"
-
-	// "time"
-
-	// "github.com/gin-contrib/cors"
 	"github.com/jinzhu/gorm"
 )
 
@@ -31,15 +27,6 @@ func main() {
 	// setup routes;
 
 	r := routes.SetupRouter()
-	// r.Use(cors.New(
-	// 	cors.Config{
-	// 		AllowOrigins: []string{"http://localhost:5173"},
-	// 		AllowMethods: []string{"GET","POST","PUT","PATCH","DELETE","HEAD"},
-	// 		AllowHeaders: []string{"Origin","Content-Type","Authorization"},
-	// 		ExposeHeaders: []string{"Content-Length"},
-	// 		AllowCredentials: true,
-	// 		MaxAge: 12*time.Hour,
-	// 	}))
 
 	// running
 	r.Run(":3000")
